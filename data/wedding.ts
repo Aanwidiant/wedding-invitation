@@ -21,6 +21,11 @@ export const wedding = {
         date: "Minggu, 20 Desember 2026",
         time: "08.00 WIB",
         location: "Masjid Al-Ikhlas, Yogyakarta",
+        // Explicit ISO 8601 timestamp (with the WIB / UTC+7 offset) used as
+        // a machine-readable target for the countdown. The `date`/`time`
+        // fields above remain the human-readable strings used for display
+        // and are not parsed programmatically.
+        datetime: "2026-12-20T08:00:00+07:00",
     },
 
     reception: {
@@ -30,6 +35,15 @@ export const wedding = {
     },
 
     mapsUrl: "https://maps.google.com/?q=Masjid+Al-Ikhlas+Yogyakarta",
+
+    quote: {
+        arabic:
+            "وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ",
+        latin: "Wa min āyātihī an khalaqa lakum min anfusikum azwājal litaskunū ilaihā wa ja'ala bainakum mawaddataw wa raḥmah, inna fī żālika la'āyātil liqaumiy yatafakkarụn.",
+        translation:
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.",
+        reference: "QS. Ar-Rum: 21",
+    },
 
     photos: {
         // Temporary development placeholder. Replace with the couple's
