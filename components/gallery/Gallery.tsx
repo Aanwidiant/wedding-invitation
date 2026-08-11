@@ -15,7 +15,11 @@ export default function Gallery({ items }: GalleryProps) {
     return (
         <section className='bg-background px-6 py-20 sm:py-24'>
             <div className='mx-auto max-w-5xl'>
-                <p className='font-body text-secondary text-center text-xs tracking-[0.3em] uppercase'>
+                <p
+                    className='font-body text-secondary text-center text-xs tracking-[0.3em] uppercase'
+                    data-aos='fade-up'
+                    data-aos-duration='600'
+                >
                     Galeri
                 </p>
 
@@ -24,6 +28,9 @@ export default function Gallery({ items }: GalleryProps) {
                         <div
                             key={item.src}
                             className='mb-4 break-inside-avoid overflow-hidden rounded-2xl sm:mb-6'
+                            data-aos='fade-up'
+                            data-aos-duration='700'
+                            data-aos-offset='80'
                         >
                             <ImageLightbox
                                 src={item.src}

@@ -12,9 +12,14 @@ interface EventDetailsProps {
     reception: EventInfo;
 }
 
-function EventItem({ title, event }: { title: string; event: EventInfo }) {
+function EventItem({ title, event, delay }: { title: string; event: EventInfo; delay?: number; }) {
     return (
-        <div className='flex flex-col items-center text-center'>
+        <div
+            className='flex flex-col items-center text-center'
+            data-aos='fade-up'
+            data-aos-offset='100'
+            data-aos-delay={delay}
+        >
             <h3 className='font-display text-primary text-2xl sm:text-3xl'>{title}</h3>
 
             <p className='font-body text-foreground mt-2 text-sm sm:text-base'>{event.date}</p>
@@ -53,7 +58,7 @@ export default function EventDetails({ ceremony, reception }: EventDetailsProps)
                         <span className='bg-border h-px w-10 md:h-10 md:w-px' />
                     </div>
 
-                    <EventItem title='Resepsi' event={reception} />
+                    <EventItem title='Resepsi' event={reception} delay={150} />
                 </div>
             </div>
         </section>

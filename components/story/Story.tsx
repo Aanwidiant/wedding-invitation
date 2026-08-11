@@ -36,7 +36,13 @@ export default function Story({ items }: StoryProps) {
                             const isEven = index % 2 === 0;
 
                             return (
-                                <li key={item.title} className='relative md:grid md:grid-cols-2'>
+                                <li
+                                    key={item.title}
+                                    className='relative md:grid md:grid-cols-2'
+                                    data-aos='fade-up'
+                                    data-aos-duration='700'
+                                    data-aos-offset='100'
+                                >
                                     <span
                                         aria-hidden='true'
                                         className='bg-primary absolute top-1.5 left-1/2 z-10 hidden h-3 w-3 -translate-x-1/2 rounded-full md:block'

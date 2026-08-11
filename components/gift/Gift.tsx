@@ -15,13 +15,14 @@ interface GiftProps {
 export default function Gift({ gift, recipientName }: GiftProps) {
     return (
         <section className='bg-surface px-6 py-20 sm:py-24'>
-            {' '}
             <div className='mx-auto max-w-4xl'>
-                {' '}
                 <div className='text-center'>
-                    {' '}
-                    <p className='font-body text-secondary text-xs tracking-[0.3em] uppercase'>
-                        Hadiah Pernikahan{' '}
+                    <p
+                        className='font-body text-secondary text-xs tracking-[0.3em] uppercase'
+                        data-aos='fade-up'
+                        data-aos-duration='600'
+                    >
+                        Hadiah Pernikahan
                     </p>
                     <h2 className='font-display text-foreground mt-3 text-3xl sm:text-4xl'>
                         Tanda Kasih
@@ -32,7 +33,12 @@ export default function Gift({ gift, recipientName }: GiftProps) {
                     </p>
                 </div>
                 <div className='mt-12 grid items-stretch gap-6 md:grid-cols-2 md:gap-8'>
-                    <div className='border-primary-soft bg-background flex h-full flex-col rounded-3xl border px-6 py-8 text-center sm:px-8'>
+                    <div
+                        className='border-primary-soft bg-background flex h-full flex-col rounded-3xl border px-6 py-8 text-center sm:px-8'
+                        data-aos='fade-up'
+                        data-aos-duration='700'
+                        data-aos-offset='100'
+                    >
                         <div className='flex flex-1 flex-col items-center justify-center'>
                             <p className='font-display text-primary text-2xl sm:text-3xl'>
                                 {gift.bank}
@@ -58,7 +64,12 @@ export default function Gift({ gift, recipientName }: GiftProps) {
                         </div>
                     </div>
 
-                    <div className='border-primary-soft bg-background flex h-full flex-col rounded-3xl border px-6 py-8 text-center sm:px-8'>
+                    <div
+                        className='border-primary-soft bg-background flex h-full flex-col rounded-3xl border px-6 py-8 text-center sm:px-8'
+                        data-aos='fade-uo'
+                        data-aos-duration='700'
+                        data-aos-offset='100'
+                    >
                         <div className='flex flex-1 flex-col items-center'>
                             <h3 className='font-display text-primary text-2xl sm:text-3xl'>
                                 Kirim Hadiah

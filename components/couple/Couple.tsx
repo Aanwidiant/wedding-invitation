@@ -28,7 +28,11 @@ function PersonDetail({ person, label }: { person: Person; label: string }) {
 
 export default function Couple({ groom, bride }: CoupleProps) {
     return (
-        <section className='bg-background px-6 py-20 sm:py-24'>
+        <section
+            className='bg-background px-6 py-20 sm:py-24'
+            data-aos='fade-up'
+            data-aos-offset='100'
+        >
             <div className='mx-auto max-w-3xl text-center'>
                 <p className='font-body text-secondary mx-auto max-w-md text-sm leading-relaxed sm:text-base'>
                     Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang

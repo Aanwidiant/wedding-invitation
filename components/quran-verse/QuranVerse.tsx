@@ -7,7 +7,11 @@ interface QuranVerseProps {
 
 export default function QuranVerse({ arabic, latin, translation, reference }: QuranVerseProps) {
     return (
-        <section className='border-border bg-surface border-y px-6 py-20 sm:py-24'>
+        <section
+            className='border-border bg-surface border-y px-6 py-20 sm:py-24'
+            data-aos='fade-up'
+            data-aos-offset='100'
+        >
             <div className='verse-fade-in mx-auto flex max-w-xl flex-col items-center gap-6 text-center'>
                 <div className='bg-accent h-px w-12' />
 

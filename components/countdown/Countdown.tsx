@@ -112,7 +112,11 @@ export default function Countdown({ targetDateTime, location, mapsUrl }: Countdo
     });
 
     return (
-        <section className='bg-background px-6 py-20 sm:py-24'>
+        <section
+            className='bg-background px-6 py-20 sm:py-24'
+            data-aos='fade-up'
+            data-aos-offset='100'
+        >
             <div className='mx-auto max-w-md text-center'>
                 <p className='font-body text-secondary text-xs tracking-[0.3em] uppercase'>
                     Menuju Resepsi
@@ -160,6 +164,9 @@ export default function Countdown({ targetDateTime, location, mapsUrl }: Countdo
                     target='_blank'
                     rel='noopener noreferrer'
                     className='bg-primary font-body text-surface hover:bg-primary-dark focus-visible:outline-primary-dark mt-12 inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-2'
+                    data-aos='fade-up'
+                    data-aos-delay='150'
+                    data-aos-offset='50'
                 >
                     <Calendar className='size-4' />
                     Simpan Tanggal
