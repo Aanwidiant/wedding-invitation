@@ -85,6 +85,49 @@ export const wedding = {
         },
     ],
 
+    // Temporary development placeholders. Replace each `src` with the
+    // couple's real photography when available; dimensions describe each
+    // image's actual pixel size so the gallery can preserve its natural
+    // aspect ratio without depending on a fixed number of photos.
+    gallery: [
+        {
+            src: "/images/placeholders/gallery-1.jpg",
+            alt: "Pengantin memegang buket bunga di tengah lapangan",
+            width: 800,
+            height: 1000,
+        },
+        {
+            src: "/images/placeholders/gallery-2.jpg",
+            alt: "Buket bunga putih pengantin",
+            width: 800,
+            height: 1000,
+        },
+        {
+            src: "/images/placeholders/gallery-3.jpg",
+            alt: "Dekorasi kursi dan bunga di area akad",
+            width: 1000,
+            height: 667,
+        },
+        {
+            src: "/images/placeholders/gallery-4.jpg",
+            alt: "Gerbang bunga dan lorong dekorasi pernikahan",
+            width: 1000,
+            height: 667,
+        },
+        {
+            src: "/images/placeholders/gallery-5.jpg",
+            alt: "Penataan meja dengan bunga dan lilin",
+            width: 800,
+            height: 800,
+        },
+        {
+            src: "/images/placeholders/gallery-6.jpg",
+            alt: "Meja resepsi dengan rangkaian bunga",
+            width: 1000,
+            height: 667,
+        },
+    ],
+
     gift: {
         bank: "BCA",
         accountNumber: "1234567890",

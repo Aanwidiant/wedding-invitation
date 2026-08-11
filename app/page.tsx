@@ -2,6 +2,7 @@ import Countdown from "@/components/countdown/Countdown";
 import Couple from "@/components/couple/Couple";
 import Envelope from "@/components/envelope/Envelope";
 import EventDetails from "@/components/event-details/EventDetails";
+import Gallery from "@/components/gallery/Gallery";
 import Hero from "@/components/hero/Hero";
 import Location from "@/components/location/Location";
 import QuranVerse from "@/components/quran-verse/QuranVerse";
@@ -43,11 +44,12 @@ export default async function Home({ searchParams }: PageProps<"/">) {
                 reception={wedding.reception}
             />
             <Countdown targetDateTime={wedding.ceremony.datetime} />
+            <Story items={wedding.story} />
+            <Gallery items={wedding.gallery} />
             <Location
                 ceremony={wedding.ceremony}
                 reception={wedding.reception}
             />
-            <Story items={wedding.story} />
         </main>
     );
 }
