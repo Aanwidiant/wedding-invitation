@@ -1,4 +1,4 @@
-import { Location } from '@/components/icons'
+import { Location } from '@/components/icons';
 
 interface EventInfo {
     date: string;
@@ -29,7 +29,7 @@ function EventItem({ title, event }: { title: string; event: EventInfo }) {
                 href={event.mapsUrl}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='bg-primary font-body text-surface hover:bg-primary-dark focus-visible:outline-primary-dark mt-4 inline-flex items-center justify-center rounded-full px-8 py-3 gap-2 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-2'
+                className='bg-primary font-body text-surface hover:bg-primary-dark focus-visible:outline-primary-dark mt-4 inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-sm tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-2'
             >
                 <Location className='size-4' />
                 Lihat Lokasi

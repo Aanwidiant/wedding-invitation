@@ -13,11 +13,7 @@ function initial(name: string) {
     return name.trim().charAt(0).toUpperCase();
 }
 
-export default function Envelope({
-    guestName,
-    groomName,
-    brideName,
-}: EnvelopeProps) {
+export default function Envelope({ guestName, groomName, brideName }: EnvelopeProps) {
     const [isOpening, setIsOpening] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const { openAudio } = useAudio();
@@ -57,17 +53,14 @@ export default function Envelope({
                     setIsVisible(false);
                 }
             }}
-            className={`bg-background fixed inset-0 z-50 flex items-center justify-center px-6 transition-all duration-700 ease-out ${isOpening
-                ? 'pointer-events-none scale-95 opacity-0'
-                : 'scale-100 opacity-100'
-                }`}
+            className={`bg-background fixed inset-0 z-50 flex items-center justify-center px-6 transition-all duration-700 ease-out ${
+                isOpening ? 'pointer-events-none scale-95 opacity-0' : 'scale-100 opacity-100'
+            }`}
         >
             <div className='border-primary-soft bg-surface w-full max-w-sm rounded-3xl border px-8 py-12 text-center'>
                 <p className='text-primary text-7xl'>
                     {initial(groomName)}
-                    <span className='text-secondary font-script mx-2 text-4xl align-middle'>
-                        &
-                    </span>
+                    <span className='text-secondary font-script mx-2 align-middle text-4xl'>&</span>
                     {initial(brideName)}
                 </p>
 
@@ -77,13 +70,11 @@ export default function Envelope({
                     Kepada Yth.
                 </p>
 
-                <p className='font-display text-foreground mt-3 text-2xl'>
-                    {guestName}
-                </p>
+                <p className='font-display text-foreground mt-3 text-2xl'>{guestName}</p>
 
                 <p className='font-body text-secondary mt-6 text-sm leading-relaxed'>
-                    Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk
-                    hadir dan memberikan doa restu pada acara pernikahan kami.
+                    Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan
+                    doa restu pada acara pernikahan kami.
                 </p>
 
                 <button

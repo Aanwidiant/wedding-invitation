@@ -48,7 +48,7 @@ export const wedding = {
     },
 
     audio: {
-        wedding: '/audio/wedding.mp3'
+        wedding: '/audio/wedding.mp3',
     },
 
     story: [

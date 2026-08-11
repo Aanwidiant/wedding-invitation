@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Date as Calendar } from '@/components/icons'
+import { Date as Calendar } from '@/components/icons';
 
 interface CountdownProps {
     targetDateTime: string;
@@ -21,7 +21,6 @@ function getTimeRemaining(targetTime: number): TimeRemaining {
     const diff = Math.max(0, targetTime - Date.now());
     const totalSeconds = Math.floor(diff / 1000);
 
-
     return {
         days: Math.floor(totalSeconds / 86400),
         hours: Math.floor((totalSeconds % 86400) / 3600),
@@ -29,35 +28,27 @@ function getTimeRemaining(targetTime: number): TimeRemaining {
         seconds: totalSeconds % 60,
         isComplete: diff <= 0,
     };
-
-
 }
 
-function CountdownUnit({
-    value,
-    label,
-}: {
-    value: number;
-    label: string;
-}) {
-    return (<div className='flex flex-col items-center gap-1'> <span className='font-display text-primary text-3xl sm:text-4xl'>
-        {String(value).padStart(2, '0')} </span>
-
-
-        <span className='font-body text-secondary text-[0.65rem] tracking-widest uppercase sm:text-xs'>
-            {label}
-        </span>
-    </div>
+function CountdownUnit({ value, label }: { value: number; label: string }) {
+    return (
+        <div className='flex flex-col items-center gap-1'>
+            {' '}
+            <span className='font-display text-primary text-3xl sm:text-4xl'>
+                {String(value).padStart(2, '0')}{' '}
+            </span>
+            <span className='font-body text-secondary text-[0.65rem] tracking-widest uppercase sm:text-xs'>
+                {label}
+            </span>
+        </div>
     );
-
-
 }
 
 function createGoogleCalendarUrl({
     title,
     targetDateTime,
     location,
-    mapsUrl
+    mapsUrl,
 }: {
     title: string;
     targetDateTime: string;
@@ -68,7 +59,10 @@ function createGoogleCalendarUrl({
     const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
 
     const formatDate = (date: Date) =>
-        date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+        date
+            .toISOString()
+            .replace(/[-:]/g, '')
+            .replace(/\.\d{3}/, '');
 
     const params = new URLSearchParams({
         action: 'TEMPLATE',
@@ -79,17 +73,10 @@ function createGoogleCalendarUrl({
     });
 
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
-
-
 }
 
-export default function Countdown({
-    targetDateTime,
-    location,
-    mapsUrl
-}: CountdownProps) {
+export default function Countdown({ targetDateTime, location, mapsUrl }: CountdownProps) {
     const [remaining, setRemaining] = useState<TimeRemaining | null>(null);
-
 
     useEffect(() => {
         const targetTime = new Date(targetDateTime).getTime();
@@ -121,7 +108,7 @@ export default function Countdown({
         title: 'Resepsi Pernikahan Rudi & Nandifa',
         targetDateTime,
         location,
-        mapsUrl
+        mapsUrl,
     });
 
     return (
@@ -151,31 +138,19 @@ export default function Countdown({
                         className='mt-8 grid grid-cols-4 gap-4 sm:gap-8'
                     >
                         <div aria-hidden='true'>
-                            <CountdownUnit
-                                value={remaining?.days ?? 0}
-                                label='Hari'
-                            />
+                            <CountdownUnit value={remaining?.days ?? 0} label='Hari' />
                         </div>
 
                         <div aria-hidden='true'>
-                            <CountdownUnit
-                                value={remaining?.hours ?? 0}
-                                label='Jam'
-                            />
+                            <CountdownUnit value={remaining?.hours ?? 0} label='Jam' />
                         </div>
 
                         <div aria-hidden='true'>
-                            <CountdownUnit
-                                value={remaining?.minutes ?? 0}
-                                label='Menit'
-                            />
+                            <CountdownUnit value={remaining?.minutes ?? 0} label='Menit' />
                         </div>
 
                         <div aria-hidden='true'>
-                            <CountdownUnit
-                                value={remaining?.seconds ?? 0}
-                                label='Detik'
-                            />
+                            <CountdownUnit value={remaining?.seconds ?? 0} label='Detik' />
                         </div>
                     </div>
                 )}
@@ -192,6 +167,4 @@ export default function Countdown({
             </div>
         </section>
     );
-
-
 }

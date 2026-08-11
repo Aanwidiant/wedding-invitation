@@ -1,13 +1,6 @@
 'use client';
 
-import {
-    createContext,
-    useContext,
-    useEffect,
-    useRef,
-    useState,
-    type ReactNode,
-} from 'react';
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 
 interface AudioContextValue {
     isPlaying: boolean;
@@ -25,10 +18,7 @@ interface AudioProviderProps {
 
 const AudioContext = createContext<AudioContextValue | null>(null);
 
-export function AudioProvider({
-    children,
-    src,
-}: AudioProviderProps) {
+export function AudioProvider({ children, src }: AudioProviderProps) {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const wasPlayingRef = useRef(false);
 
@@ -89,16 +79,10 @@ export function AudioProvider({
             }
         };
 
-        document.addEventListener(
-            'visibilitychange',
-            handleVisibilityChange,
-        );
+        document.addEventListener('visibilitychange', handleVisibilityChange);
 
         return () => {
-            document.removeEventListener(
-                'visibilitychange',
-                handleVisibilityChange,
-            );
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
         };
     }, []);
 
@@ -155,9 +139,7 @@ export function useAudio() {
     const context = useContext(AudioContext);
 
     if (!context) {
-        throw new Error(
-            'useAudio must be used inside AudioProvider',
-        );
+        throw new Error('useAudio must be used inside AudioProvider');
     }
 
     return context;

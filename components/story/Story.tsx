@@ -64,7 +64,7 @@ export default function Story({ items }: StoryProps) {
                                                             alt={item.alt ?? item.title}
                                                             fill
                                                             sizes='(min-width: 768px) 384px, 100vw'
-                                                            className='object-cover rounded-xl'
+                                                            className='rounded-xl object-cover'
                                                         />
                                                     </div>
                                                 )}
@@ -86,13 +86,13 @@ export default function Story({ items }: StoryProps) {
                                                 </p>
 
                                                 {item.image && (
-                                                    <div className='relative mt-5 aspect-4/3 w-full max-w-sm '>
+                                                    <div className='relative mt-5 aspect-4/3 w-full max-w-sm'>
                                                         <Image
                                                             src={item.image}
                                                             alt={item.alt ?? item.title}
                                                             fill
                                                             sizes='(min-width: 640px) 384px, 100vw'
-                                                            className='object-cover rounded-xl'
+                                                            className='rounded-xl object-cover'
                                                         />
                                                     </div>
                                                 )}
@@ -122,7 +122,7 @@ export default function Story({ items }: StoryProps) {
                                                             alt={item.alt ?? item.title}
                                                             fill
                                                             sizes='(min-width: 768px) 384px, 100vw'
-                                                            className='object-cover rounded-xl'
+                                                            className='rounded-xl object-cover'
                                                         />
                                                     </div>
                                                 )}
@@ -148,7 +148,7 @@ export default function Story({ items }: StoryProps) {
                                                             alt={item.alt ?? item.title}
                                                             fill
                                                             sizes='(min-width: 640px) 384px, 100vw'
-                                                            className='object-cover rounded-xl'
+                                                            className='rounded-xl object-cover'
                                                         />
                                                     </div>
                                                 )}

@@ -10,12 +10,7 @@ interface ImageLightboxProps {
     height: number;
 }
 
-export default function ImageLightbox({
-    src,
-    alt,
-    width,
-    height,
-}: ImageLightboxProps) {
+export default function ImageLightbox({ src, alt, width, height }: ImageLightboxProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {

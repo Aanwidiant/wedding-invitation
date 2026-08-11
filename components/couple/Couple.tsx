@@ -31,9 +31,8 @@ export default function Couple({ groom, bride }: CoupleProps) {
         <section className='bg-background px-6 py-20 sm:py-24'>
             <div className='mx-auto max-w-3xl text-center'>
                 <p className='font-body text-secondary mx-auto max-w-md text-sm leading-relaxed sm:text-base'>
-                    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
-                    mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada
-                    pernikahan kami.
+                    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang
+                    Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada pernikahan kami.
                 </p>
 
                 <div className='mt-12 grid gap-10 sm:mt-16 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-10'>

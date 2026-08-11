@@ -9,28 +9,22 @@ import QuranVerse from '@/components/quran-verse/QuranVerse';
 import Story from '@/components/story/Story';
 import Footer from '@/components/footer/Footer';
 import { wedding } from '@/data/wedding';
-import { AudioProvider } from '@/components/audio/AudioProvider'
+import { AudioProvider } from '@/components/audio/AudioProvider';
 import AudioButton from '@/components/audio/AudioButton';
 
 export default async function Home({ searchParams }: PageProps<'/'>) {
     const params = await searchParams;
 
     const rawGuestName = params.to;
-    const guestNameParam = Array.isArray(rawGuestName)
-        ? rawGuestName[0]
-        : rawGuestName;
+    const guestNameParam = Array.isArray(rawGuestName) ? rawGuestName[0] : rawGuestName;
 
     const guestName = guestNameParam?.trim()
         ? guestNameParam
-            .trim()
-            .split('-')
-            .filter(Boolean)
-            .map(
-                (name) =>
-                    name.charAt(0).toUpperCase() +
-                    name.slice(1).toLowerCase(),
-            )
-            .join(' ')
+              .trim()
+              .split('-')
+              .filter(Boolean)
+              .map((name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase())
+              .join(' ')
         : 'Tamu Undangan';
 
     return (
@@ -62,10 +56,7 @@ export default async function Home({ searchParams }: PageProps<'/'>) {
                 />
                 <Story items={wedding.story} />
                 <Gallery items={wedding.gallery} />
-                <Gift
-                    gift={wedding.gift}
-                    recipientName={`${wedding.groom.fullname}`}
-                />
+                <Gift gift={wedding.gift} recipientName={`${wedding.groom.fullname}`} />
                 <Footer
                     groomName={wedding.groom.name}
                     brideName={wedding.bride.name}
