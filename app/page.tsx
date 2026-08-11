@@ -3,10 +3,11 @@ import Couple from "@/components/couple/Couple";
 import Envelope from "@/components/envelope/Envelope";
 import EventDetails from "@/components/event-details/EventDetails";
 import Gallery from "@/components/gallery/Gallery";
+import Gift from "@/components/gift/Gift";
 import Hero from "@/components/hero/Hero";
-import Location from "@/components/location/Location";
 import QuranVerse from "@/components/quran-verse/QuranVerse";
 import Story from "@/components/story/Story";
+import Footer from "@/components/footer/Footer"
 import { wedding } from "@/data/wedding";
 
 export default async function Home({ searchParams }: PageProps<"/">) {
@@ -46,9 +47,14 @@ export default async function Home({ searchParams }: PageProps<"/">) {
             <Countdown targetDateTime={wedding.ceremony.datetime} />
             <Story items={wedding.story} />
             <Gallery items={wedding.gallery} />
-            <Location
-                ceremony={wedding.ceremony}
-                reception={wedding.reception}
+            <Gift
+                gift={wedding.gift}
+                recipientName={`${wedding.groom.name} & ${wedding.bride.name}`}
+            />
+            <Footer
+                groomName={wedding.groom.name}
+                brideName={wedding.bride.name}
+                date={wedding.date}
             />
         </main>
     );

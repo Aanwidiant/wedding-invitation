@@ -1,38 +1,34 @@
 export const wedding = {
     groom: {
-        name: "Muhammad Fajar Pratama",
+        name: "Rudianto",
         parents: {
-            father: "Bapak Haryanto",
-            mother: "Ibu Siti Aminah",
+            father: "Bapak Ngadiyono",
+            mother: "Ibu Samirah",
         },
     },
 
     bride: {
-        name: "Aisyah Putri Ramadhani",
+        name: "Nandifa Ayu Chandrasari, S.T.",
         parents: {
-            father: "Bapak Ahmad Fauzi",
-            mother: "Ibu Nurhayati",
+            father: "Bapak Fajar Suryono",
+            mother: "Ibu Istik Nafiyati",
         },
     },
 
-    date: "Minggu, 20 Desember 2026",
+    date: "Minggu, 23 Agustus 2026",
 
     ceremony: {
-        date: "Minggu, 20 Desember 2026",
+        date: "Minggu, 23 Agustus 2026",
         time: "08.00 WIB",
-        location: "Masjid Al-Ikhlas, Yogyakarta",
+        location: "Kalidengen II, Kalidengen, Temon, Kulon Progo",
         mapsUrl: "https://maps.google.com/?q=Masjid+Al-Ikhlas+Yogyakarta",
-        // Explicit ISO 8601 timestamp (with the WIB / UTC+7 offset) used as
-        // a machine-readable target for the countdown. The `date`/`time`
-        // fields above remain the human-readable strings used for display
-        // and are not parsed programmatically.
         datetime: "2026-12-20T08:00:00+07:00",
     },
 
     reception: {
-        date: "Minggu, 20 Desember 2026",
-        time: "11.00–14.00 WIB",
-        location: "Gedung Serbaguna Yogyakarta",
+        date: "Senin, 24 Agustus 2026",
+        time: "10.00 - Selesai WIB",
+        location: "Talunombo, Sidomulyo, Pengasih, Kulon, Progo",
         mapsUrl: "https://maps.google.com/?q=Gedung+Serbaguna+Yogyakarta",
     },
 
@@ -46,14 +42,9 @@ export const wedding = {
     },
 
     photos: {
-        // Temporary development placeholder. Replace with the couple's
-        // real pre-wedding photograph when available.
         hero: "/images/placeholders/hero-couple.jpg",
     },
 
-    // Temporary development placeholders. Replace each `image` with the
-    // couple's real photograph for the corresponding milestone when
-    // available; the section renders correctly even without an image.
     story: [
         {
             date: "2019",
@@ -61,6 +52,7 @@ export const wedding = {
             description:
                 "Kami pertama kali bertemu di sebuah acara kampus di Yogyakarta dan mulai saling mengenal lewat obrolan-obrolan sederhana.",
             image: "/images/placeholders/story-meeting.jpg",
+            alt: "Pasangan berjalan bersama di bawah cahaya sore kota",
         },
         {
             date: "2021",
@@ -68,6 +60,7 @@ export const wedding = {
             description:
                 "Setelah dua tahun menjalin komunikasi dan kebersamaan, kami memutuskan untuk memulai hubungan yang lebih serius.",
             image: "/images/placeholders/story-relationship.jpg",
+            alt: "Pasangan berjalan berdua di bawah payung pada malam hari",
         },
         {
             date: "2024",
@@ -75,6 +68,7 @@ export const wedding = {
             description:
                 "Dengan restu kedua orang tua, kami resmi bertunangan dan mulai mempersiapkan langkah menuju pernikahan.",
             image: "/images/placeholders/story-engagement.jpg",
+            alt: "Pasangan berada di dekat dekorasi lamaran bernuansa romantis",
         },
         {
             date: "2026",
@@ -82,13 +76,10 @@ export const wedding = {
             description:
                 "Kini kami siap melangkah ke jenjang pernikahan dan memohon doa restu dari Bapak/Ibu/Saudara/i sekalian.",
             image: "/images/placeholders/story-wedding.jpg",
+            alt: "Pasangan menikmati pemandangan bersama menjelang hari pernikahan",
         },
     ],
 
-    // Temporary development placeholders. Replace each `src` with the
-    // couple's real photography when available; dimensions describe each
-    // image's actual pixel size so the gallery can preserve its natural
-    // aspect ratio without depending on a fixed number of photos.
     gallery: [
         {
             src: "/images/placeholders/gallery-1.jpg",
@@ -132,7 +123,9 @@ export const wedding = {
         bank: "BCA",
         accountNumber: "1234567890",
         accountName: "Muhammad Fajar Pratama",
-        qrisImage: "/images/qris/qris.png",
+        qrisImage: "/images/placeholders/qris-placeholder.svg",
+        shippingAddress:
+            "Jl. Melati No. 24, RT 03/RW 05\nKelurahan Suryatmajan, Kecamatan Danurejan\nKota Yogyakarta, DI Yogyakarta 55213",
     },
 } as const;
 

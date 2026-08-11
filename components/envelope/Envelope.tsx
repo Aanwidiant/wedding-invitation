@@ -30,11 +30,10 @@ export default function Envelope({
             onTransitionEnd={() => {
                 if (isOpening) setIsVisible(false);
             }}
-            className={`fixed inset-0 z-50 flex items-center justify-center bg-background px-6 transition-all duration-700 ease-out ${
-                isOpening
+            className={`fixed inset-0 z-50 flex items-center justify-center bg-background px-6 transition-all duration-700 ease-out ${isOpening
                     ? "pointer-events-none scale-95 opacity-0"
                     : "scale-100 opacity-100"
-            }`}
+                }`}
         >
             <div className="w-full max-w-sm rounded-sm border border-border bg-surface px-8 py-12 text-center">
                 <p className="font-script text-4xl text-primary">

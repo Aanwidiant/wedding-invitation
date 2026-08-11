@@ -19,7 +19,7 @@ export default function Hero({
 }: HeroProps) {
     return (
         <section className="grid md:grid-cols-2">
-            <div className="relative aspect-[4/5] w-full">
+            <div className="relative aspect-4/5 w-full">
                 <Image
                     src={imageSrc}
                     alt={`${groomName} & ${brideName}`}
