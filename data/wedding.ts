@@ -31,6 +31,12 @@ export const wedding = {
 
     mapsUrl: "https://maps.google.com/?q=Masjid+Al-Ikhlas+Yogyakarta",
 
+    photos: {
+        // Temporary development placeholder. Replace with the couple's
+        // real pre-wedding photograph when available.
+        hero: "/images/placeholders/hero-couple.jpg",
+    },
+
     gift: {
         bank: "BCA",
         accountNumber: "1234567890",
