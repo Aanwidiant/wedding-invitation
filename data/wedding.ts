@@ -21,6 +21,7 @@ export const wedding = {
         date: "Minggu, 20 Desember 2026",
         time: "08.00 WIB",
         location: "Masjid Al-Ikhlas, Yogyakarta",
+        mapsUrl: "https://maps.google.com/?q=Masjid+Al-Ikhlas+Yogyakarta",
         // Explicit ISO 8601 timestamp (with the WIB / UTC+7 offset) used as
         // a machine-readable target for the countdown. The `date`/`time`
         // fields above remain the human-readable strings used for display
@@ -32,9 +33,8 @@ export const wedding = {
         date: "Minggu, 20 Desember 2026",
         time: "11.00–14.00 WIB",
         location: "Gedung Serbaguna Yogyakarta",
+        mapsUrl: "https://maps.google.com/?q=Gedung+Serbaguna+Yogyakarta",
     },
-
-    mapsUrl: "https://maps.google.com/?q=Masjid+Al-Ikhlas+Yogyakarta",
 
     quote: {
         arabic:
@@ -50,6 +50,40 @@ export const wedding = {
         // real pre-wedding photograph when available.
         hero: "/images/placeholders/hero-couple.jpg",
     },
+
+    // Temporary development placeholders. Replace each `image` with the
+    // couple's real photograph for the corresponding milestone when
+    // available; the section renders correctly even without an image.
+    story: [
+        {
+            date: "2019",
+            title: "Pertama Bertemu",
+            description:
+                "Kami pertama kali bertemu di sebuah acara kampus di Yogyakarta dan mulai saling mengenal lewat obrolan-obrolan sederhana.",
+            image: "/images/placeholders/story-meeting.jpg",
+        },
+        {
+            date: "2021",
+            title: "Memulai Hubungan",
+            description:
+                "Setelah dua tahun menjalin komunikasi dan kebersamaan, kami memutuskan untuk memulai hubungan yang lebih serius.",
+            image: "/images/placeholders/story-relationship.jpg",
+        },
+        {
+            date: "2024",
+            title: "Lamaran",
+            description:
+                "Dengan restu kedua orang tua, kami resmi bertunangan dan mulai mempersiapkan langkah menuju pernikahan.",
+            image: "/images/placeholders/story-engagement.jpg",
+        },
+        {
+            date: "2026",
+            title: "Menuju Pernikahan",
+            description:
+                "Kini kami siap melangkah ke jenjang pernikahan dan memohon doa restu dari Bapak/Ibu/Saudara/i sekalian.",
+            image: "/images/placeholders/story-wedding.jpg",
+        },
+    ],
 
     gift: {
         bank: "BCA",
