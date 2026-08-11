@@ -10,7 +10,7 @@ function firstName(fullName: string) {
 
 export default function Footer({ groomName, brideName, date }: FooterProps) {
     return (
-        <footer className='border-border bg-surface border-t px-6 py-20 sm:py-24'>
+        <footer className='bg-background px-6 py-20 sm:py-24'>
             <div className='mx-auto flex max-w-2xl flex-col items-center text-center'>
                 <p
                     className='font-body text-secondary text-xs tracking-[0.3em] uppercase'

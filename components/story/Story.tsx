@@ -14,7 +14,7 @@ interface StoryProps {
 
 export default function Story({ items }: StoryProps) {
     return (
-        <section className='bg-surface px-6 py-20 sm:py-24'>
+        <section className='border-border bg-surface border-y px-6 py-20 sm:py-24'>
             <div className='mx-auto max-w-5xl'>
                 <p className='font-body text-secondary text-center text-xs tracking-[0.3em] uppercase'>
                     Kisah Kami

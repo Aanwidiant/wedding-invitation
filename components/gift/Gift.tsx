@@ -14,7 +14,7 @@ interface GiftProps {
 
 export default function Gift({ gift, recipientName }: GiftProps) {
     return (
-        <section className='bg-surface px-6 py-20 sm:py-24'>
+        <section className='border-border bg-surface border-y px-6 py-20 sm:py-24'>
             <div className='mx-auto max-w-4xl'>
                 <div className='text-center'>
                     <p
