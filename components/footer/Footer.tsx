@@ -1,4 +1,3 @@
-
 interface FooterProps {
     groomName: string;
     brideName: string;
@@ -6,50 +5,37 @@ interface FooterProps {
 }
 
 function firstName(fullName: string) {
-    return fullName.trim().split(" ")[0];
+    return fullName.trim().split(' ')[0];
 }
 
-export default function Footer({
-    groomName,
-    brideName,
-    date,
-}: FooterProps) {
+export default function Footer({ groomName, brideName, date }: FooterProps) {
     return (
-        <footer className="border-t border-border bg-surface px-6 py-20 sm:py-24">
-            <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
-                <p className="font-body text-xs uppercase tracking-[0.3em] text-secondary">
+        <footer className='border-border bg-surface border-t px-6 py-20 sm:py-24'>
+            <div className='mx-auto flex max-w-2xl flex-col items-center text-center'>
+                <p className='font-body text-secondary text-xs tracking-[0.3em] uppercase'>
                     Terima Kasih
                 </p>
 
-                <h2 className="mt-6 font-display text-3xl text-foreground sm:text-4xl">
+                <h2 className='font-display text-foreground mt-6 text-3xl sm:text-4xl'>
                     {firstName(groomName)}
-                    <span className="mx-3 font-script text-3xl text-primary sm:text-4xl">
-                        &
-                    </span>
+                    <span className='font-script text-primary mx-3 text-3xl sm:text-4xl'>&</span>
                     {firstName(brideName)}
                 </h2>
 
-                <p className="mt-5 max-w-md font-body text-sm leading-relaxed text-secondary sm:text-base">
-                    Merupakan suatu kehormatan dan kebahagiaan bagi kami
-                    apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan
-                    doa restu untuk pernikahan kami.
+                <p className='font-body text-secondary mt-5 max-w-md text-sm leading-relaxed sm:text-base'>
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+                    berkenan hadir dan memberikan doa restu untuk pernikahan kami.
                 </p>
 
-                <p className="mt-7 font-display text-base tracking-wide text-primary sm:text-lg">
+                <p className='font-display text-primary mt-7 text-base tracking-wide sm:text-lg'>
                     {date}
                 </p>
 
-                <div className="mt-10 h-px w-10 bg-border" />
+                <div className='bg-border mt-10 h-px w-10' />
 
-                <p className="mt-6 font-body text-xs text-secondary">
-                    Dengan penuh kasih,
+                <p className='font-body text-secondary/70 mt-6 text-xs tracking-wide'>
+                    Created by Suroso Tech
                 </p>
-
-                <p className="mt-2 font-display text-sm text-foreground">
-                    {firstName(groomName)} & {firstName(brideName)}
-                </p>
-
-                <p className="mt-12 font-body text-xs tracking-wide text-secondary/70"> Created by Suroso Tech </p>
             </div>
         </footer>
     );

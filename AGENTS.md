@@ -18,11 +18,11 @@ The primary goal is to help create wedding invitations for friends and family wi
 
 The project should remain:
 
-* Lightweight
-* Elegant
-* Responsive
-* Easy to customize
-* Easy to maintain
+- Lightweight
+- Elegant
+- Responsive
+- Easy to customize
+- Easy to maintain
 
 This is **not** intended to become a SaaS application.
 
@@ -49,11 +49,11 @@ The AI agent should solve the requested problem with the smallest reasonable imp
 
 The project uses:
 
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Vercel for deployment
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel for deployment
 
 Do not introduce another framework unless explicitly requested.
 
@@ -63,12 +63,12 @@ Use Tailwind CSS directly.
 
 Do **not** use:
 
-* shadcn/ui
-* Radix UI
-* Material UI
-* Chakra UI
-* Bootstrap
-* Other UI/component libraries
+- shadcn/ui
+- Radix UI
+- Material UI
+- Chakra UI
+- Bootstrap
+- Other UI/component libraries
 
 Build custom reusable components where appropriate.
 
@@ -86,11 +86,11 @@ Common foreign terms may be used when they are already familiar or conventional 
 
 Examples:
 
-* QRIS
-* Google Maps
-* countdown
-* gallery
-* music player
+- QRIS
+- Google Maps
+- countdown
+- gallery
+- music player
 
 Do not use unnecessary English wording simply for stylistic purposes.
 
@@ -108,13 +108,13 @@ The design and content should feel appropriate for a contemporary Indonesian Mus
 
 When including Quranic verses, Islamic quotations, or prayers:
 
-* Arabic text may be displayed using the original Arabic script.
-* Provide Latin transliteration when appropriate.
-* Provide an Indonesian translation.
-* Arabic text must remain readable and properly aligned.
-* Do not treat religious text merely as decoration.
-* Use appropriate typography and spacing for Arabic text.
-* Do not unnecessarily modify, abbreviate, or alter Quranic text.
+- Arabic text may be displayed using the original Arabic script.
+- Provide Latin transliteration when appropriate.
+- Provide an Indonesian translation.
+- Arabic text must remain readable and properly aligned.
+- Do not treat religious text merely as decoration.
+- Use appropriate typography and spacing for Arabic text.
+- Do not unnecessarily modify, abbreviate, or alter Quranic text.
 
 Religious content should be presented respectfully.
 
@@ -126,26 +126,26 @@ If exact religious content has not been provided, use a clearly identifiable pla
 
 The invitation should support the following features:
 
-* Opening / envelope screen
-* Personalized guest name
-* Couple names
-* Parents' names
-* Invitation text
-* Quranic verse or Islamic quote
-* Wedding date
-* Countdown
-* Akad Nikah information
-* Reception information
-* Wedding location
-* Google Maps link
-* Couple story / timeline
-* Photo gallery
-* Digital gift section
-* Bank account information
-* Copy account number
-* QRIS image
-* Background music
-* Closing section
+- Opening / envelope screen
+- Personalized guest name
+- Couple names
+- Parents' names
+- Invitation text
+- Quranic verse or Islamic quote
+- Wedding date
+- Countdown
+- Akad Nikah information
+- Reception information
+- Wedding location
+- Google Maps link
+- Couple story / timeline
+- Photo gallery
+- Digital gift section
+- Bank account information
+- Copy account number
+- QRIS image
+- Background music
+- Closing section
 
 These features should remain lightweight and focused on presentation.
 
@@ -197,10 +197,10 @@ The exact copy may be adjusted to fit the design.
 
 The envelope interaction should be:
 
-* Elegant
-* Subtle
-* Smooth
-* Mobile-friendly
+- Elegant
+- Subtle
+- Smooth
+- Mobile-friendly
 
 Avoid excessive animation.
 
@@ -228,10 +228,10 @@ Guest names must **not** be stored in a database.
 
 Do not implement:
 
-* Guest management
-* Guest authentication
-* Guest database
-* Guest dashboard
+- Guest management
+- Guest authentication
+- Guest database
+- Guest dashboard
 
 The couple slug is a presentation and routing concern, not a database identifier.
 
@@ -252,9 +252,9 @@ The opening interaction must work reliably on mobile devices.
 
 Do not require:
 
-* Authentication
-* Database access
-* API requests
+- Authentication
+- Database access
+- API requests
 
 for opening the invitation.
 
@@ -278,44 +278,44 @@ Example:
 
 ```ts
 export const wedding = {
-  groom: {
-    name: "...",
-    parents: {
-      father: "...",
-      mother: "...",
+    groom: {
+        name: '...',
+        parents: {
+            father: '...',
+            mother: '...',
+        },
     },
-  },
 
-  bride: {
-    name: "...",
-    parents: {
-      father: "...",
-      mother: "...",
+    bride: {
+        name: '...',
+        parents: {
+            father: '...',
+            mother: '...',
+        },
     },
-  },
 
-  date: "...",
+    date: '...',
 
-  ceremony: {
-    date: "...",
-    time: "...",
-    location: "...",
-  },
+    ceremony: {
+        date: '...',
+        time: '...',
+        location: '...',
+    },
 
-  reception: {
-    date: "...",
-    time: "...",
-    location: "...",
-  },
+    reception: {
+        date: '...',
+        time: '...',
+        location: '...',
+    },
 
-  mapsUrl: "...",
+    mapsUrl: '...',
 
-  gift: {
-    bank: "...",
-    accountNumber: "...",
-    accountName: "...",
-    qrisImage: "/images/qris/qris.png",
-  },
+    gift: {
+        bank: '...',
+        accountNumber: '...',
+        accountName: '...',
+        qrisImage: '/images/qris/qris.png',
+    },
 };
 ```
 
@@ -445,12 +445,12 @@ Do not mix temporary placeholder assets with final wedding assets when avoidable
 
 Do not create directories such as:
 
-* `lib/`
-* `hooks/`
-* `services/`
-* `contexts/`
-* `store/`
-* `utils/`
+- `lib/`
+- `hooks/`
+- `services/`
+- `contexts/`
+- `store/`
+- `utils/`
 
 until there is an actual requirement for them.
 
@@ -496,57 +496,57 @@ The AI may use dummy data to implement and demonstrate the interface.
 
 Dummy data must:
 
-* Be realistic for an Indonesian wedding.
-* Use familiar Indonesian names.
-* Use realistic Indonesian date and time formats.
-* Use realistic Indonesian locations.
-* Use Indonesian terminology.
-* Use realistic Indonesian bank names when demonstrating digital gifts.
-* Be easy to replace later.
-* Remain centralized in the wedding data/configuration layer.
+- Be realistic for an Indonesian wedding.
+- Use familiar Indonesian names.
+- Use realistic Indonesian date and time formats.
+- Use realistic Indonesian locations.
+- Use Indonesian terminology.
+- Use realistic Indonesian bank names when demonstrating digital gifts.
+- Be easy to replace later.
+- Remain centralized in the wedding data/configuration layer.
 
 Example:
 
 ```ts
 export const wedding = {
-  groom: {
-    name: "Muhammad Fajar Pratama",
-    parents: {
-      father: "Bapak Haryanto",
-      mother: "Ibu Siti Aminah",
+    groom: {
+        name: 'Muhammad Fajar Pratama',
+        parents: {
+            father: 'Bapak Haryanto',
+            mother: 'Ibu Siti Aminah',
+        },
     },
-  },
 
-  bride: {
-    name: "Aisyah Putri Ramadhani",
-    parents: {
-      father: "Bapak Ahmad Fauzi",
-      mother: "Ibu Nurhayati",
+    bride: {
+        name: 'Aisyah Putri Ramadhani',
+        parents: {
+            father: 'Bapak Ahmad Fauzi',
+            mother: 'Ibu Nurhayati',
+        },
     },
-  },
 
-  date: "Minggu, 20 Desember 2026",
+    date: 'Minggu, 20 Desember 2026',
 
-  ceremony: {
-    date: "Minggu, 20 Desember 2026",
-    time: "08.00 WIB",
-    location: "Masjid Al-Ikhlas, Yogyakarta",
-  },
+    ceremony: {
+        date: 'Minggu, 20 Desember 2026',
+        time: '08.00 WIB',
+        location: 'Masjid Al-Ikhlas, Yogyakarta',
+    },
 
-  reception: {
-    date: "Minggu, 20 Desember 2026",
-    time: "11.00–14.00 WIB",
-    location: "Gedung Serbaguna Yogyakarta",
-  },
+    reception: {
+        date: 'Minggu, 20 Desember 2026',
+        time: '11.00–14.00 WIB',
+        location: 'Gedung Serbaguna Yogyakarta',
+    },
 
-  mapsUrl: "...",
+    mapsUrl: '...',
 
-  gift: {
-    bank: "BCA",
-    accountNumber: "1234567890",
-    accountName: "Muhammad Fajar Pratama",
-    qrisImage: "/images/qris/qris.png",
-  },
+    gift: {
+        bank: 'BCA',
+        accountNumber: '1234567890',
+        accountName: 'Muhammad Fajar Pratama',
+        qrisImage: '/images/qris/qris.png',
+    },
 };
 ```
 
@@ -582,16 +582,16 @@ public/
 
 When final photographs become available:
 
-* Replace the assets.
-* Preserve the existing component structure.
-* Adjust image cropping or positioning if necessary.
-* Do not redesign the entire page simply because the final photographs have different compositions.
+- Replace the assets.
+- Preserve the existing component structure.
+- Adjust image cropping or positioning if necessary.
+- Do not redesign the entire page simply because the final photographs have different compositions.
 
 The UI should support common image orientations:
 
-* Portrait
-* Landscape
-* Square
+- Portrait
+- Landscape
+- Square
 
 Use appropriate aspect ratios and `object-fit` behavior.
 
@@ -605,14 +605,14 @@ The visual identity is inspired by the couple's pre-wedding clothing and traditi
 
 The design should feel:
 
-* Elegant
-* Warm
-* Romantic
-* Refined
-* Minimal
-* Personal
-* Contemporary
-* Subtly traditional
+- Elegant
+- Warm
+- Romantic
+- Refined
+- Minimal
+- Personal
+- Contemporary
+- Subtly traditional
 
 The photographs should remain the primary visual element.
 
@@ -620,12 +620,12 @@ UI elements must support the photographs rather than compete with them.
 
 Avoid:
 
-* Excessive gradients
-* Excessive shadows
-* Excessive decorations
-* Overly saturated backgrounds
-* Excessive animations
-* Visually noisy layouts
+- Excessive gradients
+- Excessive shadows
+- Excessive decorations
+- Overly saturated backgrounds
+- Excessive animations
+- Visually noisy layouts
 
 The design should feel intentional rather than template-like.
 
@@ -706,10 +706,10 @@ Use as the primary display typeface.
 
 Preferred for:
 
-* Couple names
-* Major headings
-* Section titles
-* Important decorative text
+- Couple names
+- Major headings
+- Section titles
+- Important decorative text
 
 Do not use it for long paragraphs.
 
@@ -719,17 +719,17 @@ Use sparingly.
 
 Preferred for:
 
-* Couple initials
-* Small signature-like elements
-* Very limited decorative text
+- Couple initials
+- Small signature-like elements
+- Very limited decorative text
 
 Do not use it for:
 
-* Body text
-* Long sentences
-* Event information
-* Navigation
-* Buttons
+- Body text
+- Long sentences
+- Event information
+- Navigation
+- Buttons
 
 Readability takes priority.
 
@@ -739,11 +739,11 @@ Use as the primary body typeface.
 
 Preferred for:
 
-* Invitation text
-* Descriptions
-* Event information
-* Supporting text
-* General readable content
+- Invitation text
+- Descriptions
+- Event information
+- Supporting text
+- General readable content
 
 Lora should remain the default body font unless there is a clear design reason to change it.
 
@@ -753,9 +753,9 @@ Use for Arabic content.
 
 Preferred for:
 
-* Quranic verses
-* Arabic prayers
-* Arabic religious quotations
+- Quranic verses
+- Arabic prayers
+- Arabic religious quotations
 
 Arabic text should remain readable and properly spaced.
 
@@ -866,11 +866,11 @@ Use Server Components by default.
 
 Add `"use client"` only to components that require:
 
-* React state
-* Event handlers
-* Browser APIs
-* Client-side effects
-* Client-side interactive behavior
+- React state
+- Event handlers
+- Browser APIs
+- Client-side effects
+- Client-side interactive behavior
 
 Do not make the entire page a Client Component when only a small feature requires client-side behavior.
 
@@ -878,10 +878,10 @@ Keep interactive logic localized to the smallest appropriate component.
 
 Examples of likely Client Components:
 
-* Envelope interaction
-* Music player
-* Countdown
-* Copy account number interaction
+- Envelope interaction
+- Music player
+- Countdown
+- Copy account number interaction
 
 Prefer keeping static sections as Server Components.
 
@@ -893,19 +893,19 @@ Animations should be subtle and purposeful.
 
 Good examples:
 
-* Envelope opening
-* Fade in
-* Gentle slide
-* Image reveal
-* Scroll reveal
-* Smooth section transitions
+- Envelope opening
+- Fade in
+- Gentle slide
+- Image reveal
+- Scroll reveal
+- Smooth section transitions
 
 Avoid:
 
-* Excessive bouncing
-* Constant motion
-* Distracting parallax
-* Heavy animation libraries for simple effects
+- Excessive bouncing
+- Constant motion
+- Distracting parallax
+- Heavy animation libraries for simple effects
 
 Animation must never interfere with reading or interaction.
 
@@ -939,11 +939,11 @@ Do not hardcode the target date inside the countdown component.
 
 The digital gift section should support:
 
-* Bank name
-* Account number
-* Account holder
-* Copy account number button
-* QRIS image
+- Bank name
+- Account number
+- Account holder
+- Copy account number button
+- QRIS image
 
 There is no payment gateway.
 
@@ -969,10 +969,10 @@ Buka Google Maps
 
 The location information should include relevant details such as:
 
-* Venue name
-* Address
-* Date
-* Time
+- Venue name
+- Address
+- Date
+- Time
 
 when available.
 
@@ -986,9 +986,9 @@ Music controls should remain accessible without dominating the interface.
 
 The user should be able to:
 
-* Play music
-* Pause music
-* See the current music state
+- Play music
+- Pause music
+- See the current music state
 
 Do not autoplay audio in a way that violates browser policies.
 
@@ -1002,12 +1002,12 @@ Use semantic HTML where appropriate.
 
 Important requirements:
 
-* Meaningful `alt` text for images
-* Keyboard-accessible interactive elements
-* Sufficient text contrast
-* Visible interactive states
-* Buttons should behave like buttons
-* Links should behave like links
+- Meaningful `alt` text for images
+- Keyboard-accessible interactive elements
+- Sufficient text contrast
+- Visible interactive states
+- Buttons should behave like buttons
+- Links should behave like links
 
 Do not rely solely on color to communicate information.
 
@@ -1021,11 +1021,11 @@ The website should remain lightweight.
 
 Prefer:
 
-* Next.js image optimization
-* CSS animations where sufficient
-* Small reusable components
-* Minimal dependencies
-* Lazy loading for non-critical images where appropriate
+- Next.js image optimization
+- CSS animations where sufficient
+- Small reusable components
+- Minimal dependencies
+- Lazy loading for non-critical images where appropriate
 
 Do not add a dependency when the same result can reasonably be achieved with existing browser APIs, CSS, React, or Next.js.
 
@@ -1039,10 +1039,10 @@ Use client components only when interactivity requires them.
 
 The invitation should have appropriate:
 
-* Page title
-* Description
-* Open Graph metadata
-* Social sharing image where available
+- Page title
+- Description
+- Open Graph metadata
+- Social sharing image where available
 
 The page should look reasonable when shared through messaging applications and social media.
 
@@ -1054,23 +1054,23 @@ The metadata should use the actual wedding data when available.
 
 Do **not** implement the following unless explicitly requested:
 
-* Database
-* Supabase
-* Authentication
-* User accounts
-* Admin dashboard
-* Guest management system
-* RSVP backend
-* Guest database
-* CMS
-* Payment gateway
-* Payment processing
-* Multi-tenant SaaS architecture
-* Complex API
-* Custom map implementation
-* Backend server
-* Complex state management library
-* UI component library
+- Database
+- Supabase
+- Authentication
+- User accounts
+- Admin dashboard
+- Guest management system
+- RSVP backend
+- Guest database
+- CMS
+- Payment gateway
+- Payment processing
+- Multi-tenant SaaS architecture
+- Complex API
+- Custom map implementation
+- Backend server
+- Complex state management library
+- UI component library
 
 The project is intentionally a simple invitation website.
 
@@ -1128,22 +1128,22 @@ The AI agent should act as a coding partner, not as an autonomous product manage
 
 The agent may:
 
-* Suggest improvements
-* Identify bugs
-* Improve accessibility
-* Improve responsive behavior
-* Improve performance
-* Refactor clearly problematic code
+- Suggest improvements
+- Identify bugs
+- Improve accessibility
+- Improve responsive behavior
+- Improve performance
+- Refactor clearly problematic code
 
 The agent must not:
 
-* Change the technology stack
-* Add unnecessary dependencies
-* Expand the product scope
-* Replace the established design direction
-* Introduce a database
-* Introduce authentication
-* Introduce a component library
+- Change the technology stack
+- Add unnecessary dependencies
+- Expand the product scope
+- Replace the established design direction
+- Introduce a database
+- Introduce authentication
+- Introduce a component library
 
 without explicit approval.
 
@@ -1175,14 +1175,14 @@ Avoid searching through presentation components to replace wedding-specific info
 
 Avoid hardcoding:
 
-* Couple names
-* Parent names
-* Dates
-* Locations
-* Bank information
-* Guest names
-* Wedding quotes
-* Maps URLs
+- Couple names
+- Parent names
+- Dates
+- Locations
+- Bank information
+- Guest names
+- Wedding quotes
+- Maps URLs
 
 inside UI components.
 
@@ -1198,10 +1198,10 @@ Avoid large refactors unless explicitly requested.
 
 Before considering a feature complete:
 
-* Review the changed files.
-* Check for unintended changes.
-* Check TypeScript errors.
-* Check build errors where appropriate.
+- Review the changed files.
+- Check for unintended changes.
+- Check TypeScript errors.
+- Check build errors where appropriate.
 
 ---
 
@@ -1209,15 +1209,15 @@ Before considering a feature complete:
 
 A feature is considered complete when:
 
-* It satisfies the requested requirement.
-* It matches the established visual design.
-* It works on mobile.
-* It remains responsive on desktop.
-* It uses existing design tokens.
-* It does not introduce unnecessary dependencies.
-* It does not break existing functionality.
-* It introduces no new TypeScript errors.
-* The implementation remains understandable and maintainable.
+- It satisfies the requested requirement.
+- It matches the established visual design.
+- It works on mobile.
+- It remains responsive on desktop.
+- It uses existing design tokens.
+- It does not introduce unnecessary dependencies.
+- It does not break existing functionality.
+- It introduces no new TypeScript errors.
+- The implementation remains understandable and maintainable.
 
 ---
 
@@ -1238,4 +1238,3 @@ Prefer clarity over cleverness.
 Prefer maintainability over unnecessary abstraction.
 
 Do not solve problems that the project does not have.
-

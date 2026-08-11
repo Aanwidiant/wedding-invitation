@@ -1,6 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from 'react';
+import { useAudio } from '@/components/audio/AudioProvider';
 
 interface EnvelopeProps {
     guestName: string;
@@ -19,48 +20,76 @@ export default function Envelope({
 }: EnvelopeProps) {
     const [isOpening, setIsOpening] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
+    const { openAudio } = useAudio();
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        const originalOverflow = document.body.style.overflow;
+
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = originalOverflow;
+        };
+    }, [isVisible]);
 
     if (!isVisible) {
         return null;
     }
 
+    const handleOpen = async () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant',
+        });
+
+        await openAudio();
+
+        setIsOpening(true);
+    };
+
     return (
         <div
             aria-hidden={isOpening}
             onTransitionEnd={() => {
-                if (isOpening) setIsVisible(false);
+                if (isOpening) {
+                    setIsVisible(false);
+                }
             }}
-            className={`fixed inset-0 z-50 flex items-center justify-center bg-background px-6 transition-all duration-700 ease-out ${isOpening
-                    ? "pointer-events-none scale-95 opacity-0"
-                    : "scale-100 opacity-100"
+            className={`bg-background fixed inset-0 z-50 flex items-center justify-center px-6 transition-all duration-700 ease-out ${isOpening
+                ? 'pointer-events-none scale-95 opacity-0'
+                : 'scale-100 opacity-100'
                 }`}
         >
-            <div className="w-full max-w-sm rounded-sm border border-border bg-surface px-8 py-12 text-center">
-                <p className="font-script text-4xl text-primary">
+            <div className='border-primary-soft bg-surface w-full max-w-sm rounded-3xl border px-8 py-12 text-center'>
+                <p className='text-primary text-7xl'>
                     {initial(groomName)}
-                    <span className="mx-2 text-accent">&</span>
+                    <span className='text-secondary font-script mx-2 text-4xl align-middle'>
+                        &
+                    </span>
                     {initial(brideName)}
                 </p>
 
-                <div className="mx-auto my-6 h-px w-16 bg-border" />
+                <div className='bg-border mx-auto my-6 h-px w-16' />
 
-                <p className="font-body text-xs uppercase tracking-widest text-secondary">
+                <p className='font-body text-secondary text-xs tracking-widest uppercase'>
                     Kepada Yth.
                 </p>
 
-                <p className="mt-3 font-display text-2xl text-foreground">
+                <p className='font-display text-foreground mt-3 text-2xl'>
                     {guestName}
                 </p>
 
-                <p className="mt-6 font-body text-sm leading-relaxed text-secondary">
+                <p className='font-body text-secondary mt-6 text-sm leading-relaxed'>
                     Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk
                     hadir dan memberikan doa restu pada acara pernikahan kami.
                 </p>
 
                 <button
-                    type="button"
-                    onClick={() => setIsOpening(true)}
-                    className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-body text-sm tracking-wide text-surface transition-colors hover:bg-primary-dark"
+                    type='button'
+                    onClick={handleOpen}
+                    className='bg-primary font-body text-surface hover:bg-primary-dark mt-8 inline-flex items-center justify-center rounded-full px-8 py-3 text-sm tracking-wide transition-colors'
                 >
                     Buka Undangan
                 </button>

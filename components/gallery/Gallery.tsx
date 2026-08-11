@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ImageLightbox from '@/components/gallery/ImageLightbox';
 
 interface GalleryItem {
     src: string;
@@ -13,25 +13,23 @@ interface GalleryProps {
 
 export default function Gallery({ items }: GalleryProps) {
     return (
-        <section className="bg-background px-6 py-20 sm:py-24">
-            <div className="mx-auto max-w-5xl">
-                <p className="text-center font-body text-xs uppercase tracking-[0.3em] text-secondary">
+        <section className='bg-background px-6 py-20 sm:py-24'>
+            <div className='mx-auto max-w-5xl'>
+                <p className='font-body text-secondary text-center text-xs tracking-[0.3em] uppercase'>
                     Galeri
                 </p>
 
-                <div className="gallery-fade-in mt-10 columns-2 gap-4 sm:mt-12 sm:columns-3 sm:gap-6">
+                <div className='gallery-fade-in mt-10 columns-2 gap-4 sm:mt-12 sm:columns-3 sm:gap-6'>
                     {items.map((item) => (
                         <div
                             key={item.src}
-                            className="mb-4 break-inside-avoid sm:mb-6"
+                            className='mb-4 break-inside-avoid overflow-hidden rounded-2xl sm:mb-6'
                         >
-                            <Image
+                            <ImageLightbox
                                 src={item.src}
                                 alt={item.alt}
                                 width={item.width}
                                 height={item.height}
-                                sizes="(min-width: 640px) 33vw, 50vw"
-                                className="h-auto w-full"
                             />
                         </div>
                     ))}
