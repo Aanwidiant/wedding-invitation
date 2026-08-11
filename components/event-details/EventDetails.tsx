@@ -12,7 +12,7 @@ interface EventDetailsProps {
     reception: EventInfo;
 }
 
-function EventItem({ title, event, delay }: { title: string; event: EventInfo; delay?: number; }) {
+function EventItem({ title, event, delay }: { title: string; event: EventInfo; delay?: number }) {
     return (
         <div
             className='flex flex-col items-center text-center'

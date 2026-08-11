@@ -21,11 +21,11 @@ export default async function Home({ searchParams }: PageProps<'/'>) {
 
     const guestName = guestNameParam?.trim()
         ? guestNameParam
-            .trim()
-            .split('-')
-            .filter(Boolean)
-            .map((name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase())
-            .join(' ')
+              .trim()
+              .split('-')
+              .filter(Boolean)
+              .map((name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase())
+              .join(' ')
         : 'Tamu Undangan';
 
     return (
