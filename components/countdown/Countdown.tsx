@@ -69,7 +69,7 @@ function createGoogleCalendarUrl({
         text: title,
         dates: `${formatDate(start)}/${formatDate(end)}`,
         location,
-        details: `Menghadiri acara resepsi pernikahan Rudi & Nandifa. Lokasi di Google Maps:\n${mapsUrl}`,
+        details: `Menghadiri acara ngunduh mantu pernikahan Rudi & Nandifa. Lokasi di Google Maps:\n${mapsUrl}`,
     });
 
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -105,7 +105,7 @@ export default function Countdown({ targetDateTime, location, mapsUrl }: Countdo
     const isComplete = remaining?.isComplete ?? false;
 
     const googleCalendarUrl = createGoogleCalendarUrl({
-        title: 'Resepsi Pernikahan Rudi & Nandifa',
+        title: 'Ngunduh Mantu Pernikahan Rudi & Nandifa',
         targetDateTime,
         location,
         mapsUrl,
