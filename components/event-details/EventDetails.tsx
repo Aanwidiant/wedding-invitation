@@ -58,7 +58,7 @@ export default function EventDetails({ ceremony, reception }: EventDetailsProps)
                         <span className='bg-border h-px w-10 md:h-10 md:w-px' />
                     </div>
 
-                    <EventItem title='Resepsi' event={reception} delay={150} />
+                    <EventItem title='Ngunduh Mantu' event={reception} delay={150} />
                 </div>
             </div>
         </section>

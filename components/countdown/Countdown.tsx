@@ -119,7 +119,7 @@ export default function Countdown({ targetDateTime, location, mapsUrl }: Countdo
         >
             <div className='mx-auto max-w-md text-center'>
                 <p className='font-body text-secondary text-xs tracking-[0.3em] uppercase'>
-                    Menuju Resepsi
+                    Menuju Ngunduh Mantu
                 </p>
 
                 <h2 className='font-display text-foreground mt-3 text-2xl sm:text-3xl'>
@@ -136,8 +136,8 @@ export default function Countdown({ targetDateTime, location, mapsUrl }: Countdo
                         aria-live='off'
                         aria-label={
                             remaining
-                                ? `${remaining.days} hari ${remaining.hours} jam ${remaining.minutes} menit ${remaining.seconds} detik menuju resepsi`
-                                : 'Menghitung waktu menuju resepsi'
+                                ? `${remaining.days} hari ${remaining.hours} jam ${remaining.minutes} menit ${remaining.seconds} detik menuju ngunduh mantu`
+                                : 'Menghitung waktu menuju ngunduh mantu'
                         }
                         className='mt-8 grid grid-cols-4 gap-4 sm:gap-8'
                     >

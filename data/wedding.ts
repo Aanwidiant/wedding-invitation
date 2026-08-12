@@ -17,7 +17,7 @@ export const wedding = {
         },
     },
 
-    date: 'Minggu, 23 Agustus 2026',
+    date: 'Senin, 24 Agustus 2026',
 
     ceremony: {
         date: 'Minggu, 23 Agustus 2026',
