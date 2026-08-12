@@ -29,8 +29,24 @@ const groomFirstName = wedding.groom.name.split(' ')[0];
 const brideFirstName = wedding.bride.name.split(' ')[0];
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://rudinandifa.suroso-tech.my.id'),
+
     title: `Undangan Pernikahan ${groomFirstName} & ${brideFirstName}`,
     description: `Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan ${groomFirstName} dan ${brideFirstName} pada ${wedding.date}.`,
+
+    openGraph: {
+        title: `Undangan Pernikahan ${groomFirstName} & ${brideFirstName}`,
+        description: `Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan ${groomFirstName} dan ${brideFirstName} pada ${wedding.date}.`,
+        images: [
+            {
+                url: '/og-image.jpg',
+                width: 2731,
+                height: 2731,
+                alt: `Undangan Pernikahan ${groomFirstName} & ${brideFirstName}`,
+            },
+        ],
+        type: 'website',
+    },
 };
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
